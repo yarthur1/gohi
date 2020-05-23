@@ -14,7 +14,7 @@ func init() {
     log.SetOutput(os.Stdout)
 
     // Only log the warning severity or above.
-    log.SetLevel(log.WarnLevel)
+    log.SetLevel(log.InfoLevel)
 }
 
 func main() {
@@ -27,6 +27,11 @@ func main() {
         "omg":    true,
         "number": 122,
     }).Warn("The group's number increased tremendously!")
+
+    log.WithFields(log.Fields{
+        "omg":    true,
+        "number": 100,
+    }).Error("The ice breaks!")
 
     log.WithFields(log.Fields{
         "omg":    true,
