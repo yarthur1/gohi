@@ -17,7 +17,7 @@ func main() {
         // ctx, cancel := context.WithTimeout(context.Background(), 10*time.Millisecond)
 
         go func() {
-            time.Sleep(20 * time.Millisecond)
+            time.Sleep(200 * time.Millisecond)
             chanWaitGroup <- str
         }()
 

@@ -20,5 +20,5 @@ func Hash(key []byte) uint32 {
 }
 
 func main(){
-    fmt.Print(Hash([]byte("GIFT_CALC_INFO_V2_15870113787667300157")) % 1024)
+    fmt.Print(Hash([]byte("finan:finan:vip:old:activation")) % 1024)
 }
