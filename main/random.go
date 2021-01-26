@@ -12,7 +12,7 @@ func main() {
     // 全局函数
     //
 
-    rand.Seed(time.Now().Unix())
+    rand.Seed(time.Now().Unix())  //随机种子最好是一个 多个以当前时间为种子（时间太近） 有可能随机数相同
 
     fmt.Println(rand.Int())       // int随机值，返回值为int
     fmt.Println(rand.Intn(100))   // [0,100)的随机值，返回值为int
