@@ -11,4 +11,6 @@ func main() {
 
     fmt.Printf("day = %v\n", day)
 
+    fmt.Printf(time.Unix(0, -100000).Format("2006-01-02 15:04:05"))
+
 }
