@@ -1,10 +1,11 @@
 package main
 
 import (
-    "fmt"
     "sync"
     "time"
 )
+// https://tiancaiamao.gitbooks.io/go-internals/content/zh/10.1.html
+// go run -race chan.go 不会有race
 
 func main() {
     var wg sync.WaitGroup
@@ -15,10 +16,8 @@ func main() {
         go func() {
             ch <- true
             count++
-            fmt.Println(count)
-            time.Sleep(time.Second)
+            time.Sleep(time.Millisecond)
             count--
-            fmt.Println(count)
             <-ch
             wg.Done()
         }()
